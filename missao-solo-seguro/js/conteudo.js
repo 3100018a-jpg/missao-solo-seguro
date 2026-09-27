@@ -290,8 +290,8 @@ window.CONTEUDO = {
       "Aparência não garante qualidade do solo. Para saber se ele está contaminado, é preciso levantar o histórico do terreno, " +
       "verificar os poluentes suspeitos e comparar o laudo com os valores orientadores (VRQ, VP e VI) da Resolução CONAMA nº 420/2009.",
     tarefa:
-      "Agora é a sua vez. Escreva, com suas palavras, uma pergunta para cada eixo e uma frase-síntese. " +
-      "Esse é o Roteiro de Mediação da sua equipe para a Primeira Leitura do Território.",
+      "Agora é a sua vez. Escreva, com suas palavras, uma reflexão objetiva sobre cada um dos três eixos. " +
+      "Esse é o Roteiro de Mediação da sua equipe técnica para a Primeira Leitura do Território.",
     niveis: [
       { min: 0, nome: "Técnica(o) em formação" },
       { min: 800, nome: "Técnica(o) de campo" },
@@ -306,7 +306,7 @@ window.CONTEUDO = {
       { t: "Para quem", d: "Estudantes do curso Técnico em Meio Ambiente. Componente Normas CETESB, Unidade 4, Aula 1: Parâmetros da qualidade do solo." },
       { t: "Objetivo", d: "Reconhecer que a avaliação da qualidade do solo depende do histórico da área, dos poluentes suspeitos e dos critérios técnicos (VRQ, VP e VI), nunca apenas da aparência." },
       { t: "Duração", d: "De 20 a 30 minutos. Pode ser jogado individualmente ou em grupos, projetado para a turma ou em computadores e celulares." },
-      { t: "Em grupos", d: "Combine os papéis: facilitador(a), relator(a), controlador(a) do tempo e porta-voz. O relator registra as 3 perguntas e a frase-síntese da tela final; o porta-voz apresenta na plenária." },
+      { t: "Em grupos", d: "Combine os papéis: facilitador(a), relator(a), controlador(a) do tempo e porta-voz. O relator registra as 3 reflexões e a frase-síntese da tela final; o porta-voz apresenta na plenária." },
       { t: "Sobre os dados", d: "VP e VI: Resolução CONAMA nº 420/2009, Anexo II (mg/kg de peso seco, uso agrícola). VRQ de Minas Gerais: DN COPAM nº 166/2011. Os laudos dos potes e dos pontos P1 a P5 são fictícios, criados para o exercício. Em São Paulo, a CETESB tem valores orientadores próprios (Decisão de Diretoria nº 125/2021/E): vale comparar com a turma." },
       { t: "Áudio", d: "Música e efeitos ligam depois do primeiro toque na tela (regra dos navegadores). A narração usa a voz em português instalada no aparelho; se não houver, o botão fica desativado." }
     ],

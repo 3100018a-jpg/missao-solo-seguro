@@ -18,6 +18,14 @@
     for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
     return a;
   };
+  // Embaralha de novo enquanto a ordem sorteada ainda "entregar" a resposta.
+  const embaralharSem = (arr, entrega) => {
+    let a = embaralhar(arr);
+    for (let t = 0; t < 200 && entrega(a); t++) a = embaralhar(arr);
+    return a;
+  };
+  // Três ou mais valores seguidos em ordem crescente ou decrescente (ex.: 1, 2, 3).
+  const temSequencia = (ns) => ns.some((n, i) => i >= 2 && ((ns[i - 2] < ns[i - 1] && ns[i - 1] < n) || (ns[i - 2] > ns[i - 1] && ns[i - 1] > n)));
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const num = (n) => Number(n).toLocaleString("pt-BR");
   const html = (str) => { const t = document.createElement("template"); t.innerHTML = str.trim(); return t.content.firstElementChild; };
@@ -464,6 +472,11 @@
   /* ---------------------------------------------------------- pedido com orçamento (fase 3) */
   function passoPedido(ctx, cfg) {
     return new Promise((resolve) => {
+      // Ordem aleatória, sem deixar as análises corretas todas juntas.
+      const itensTela = embaralharSem(cfg.itens, (a) => {
+        const pos = a.map((x, i) => (x.tipo !== "errado" ? i : -1)).filter((i) => i >= 0);
+        return pos[pos.length - 1] - pos[0] === pos.length - 1;
+      });
       const bloco = html(`
         <div class="passo">
           <p class="enunciado">${esc(cfg.instrucao)}</p>
@@ -472,7 +485,7 @@
             <div class="orc-barra"><span></span></div>
           </div>
           <div class="pedido-itens">
-            ${cfg.itens.map((it) => `
+            ${itensTela.map((it) => `
               <button type="button" class="item-pedido" data-id="${it.id}" aria-pressed="false">
                 <span class="caixa" aria-hidden="true"></span>
                 <span class="item-nome">${esc(it.nome)}</span>
@@ -644,6 +657,10 @@
   /* ---------------------------------------------------------- laudo (fase 4) */
   function passoLaudo(ctx, cfg, refs) {
     return new Promise((resolve) => {
+      // Amostras em ordem aleatória: cada uma mantém a sua classe, mas as respostas
+      // não aparecem em sequência crescente nem decrescente, e a ordem nunca é P1, P2, P3...
+      const amostrasTela = embaralharSem(cfg.amostras, (a) =>
+        temSequencia(a.map((x) => x.classe)) || temSequencia(a.map((x) => +x.id.replace(/\D/g, ""))));
       const bloco = html(`
         <div class="passo">
           <p class="enunciado">${esc(cfg.instrucao)}</p>
@@ -656,7 +673,7 @@
               ${Object.values(refs).map((r) => `<div><b>${r.simbolo}</b><span>VRQ-MG ${fmtVal(r.vrq)}</span><span>VP ${fmtVal(r.vp)}</span><span>VI agrícola ${fmtVal(r.vi)}</span></div>`).join("")}
             </div>
             <ul class="amostras">
-              ${cfg.amostras.map((a) => `
+              ${amostrasTela.map((a) => `
                 <li class="amostra-linha" data-id="${a.id}">
                   <span class="amostra-id">${a.id}</span>
                   <span class="amostra-local">${esc(a.local)}</span>
@@ -1073,7 +1090,7 @@
       `Eixo 1 · Histórico e uso da terra: ${v("minha-p1")}`,
       `Eixo 2 · Poluentes suspeitos e fonte: ${v("minha-p2")}`,
       `Eixo 3 · Critérios da CONAMA 420: ${v("minha-p3")}`,
-      `Frase-síntese: ${v("minha-sintese")}`,
+      `Frase-síntese da atuação técnica: ${v("minha-sintese")}`,
       "",
       `Síntese de referência: ${C.final.sintese}`
     ].join("\n");
@@ -1124,11 +1141,11 @@
                 <div class="campo-eixo">
                   <label for="minha-p${e.n}"><span class="rotulo">Eixo ${e.n}</span> ${esc(e.nome)}</label>
                   ${estado.perguntasModelo[e.n] ? `<p class="modelo"><span>Pergunta-modelo que você escolheu:</span> ${esc(estado.perguntasModelo[e.n])}</p>` : ""}
-                  <textarea id="minha-p${e.n}" rows="3" placeholder="Escreva aqui a pergunta da sua equipe para o Eixo ${e.n}">${esc(rascunho["minha-p" + e.n] || "")}</textarea>
+                  <textarea id="minha-p${e.n}" rows="3" placeholder="Escreva aqui a sua reflexão sobre o Eixo ${e.n}">${esc(rascunho["minha-p" + e.n] || "")}</textarea>
                 </div>`).join("")}
               <div class="campo-eixo">
-                <label for="minha-sintese"><span class="rotulo">Síntese</span> Frase-síntese da equipe</label>
-                <textarea id="minha-sintese" rows="2" placeholder="Ex.: Aparência não garante qualidade do solo porque...">${esc(rascunho["minha-sintese"] || "")}</textarea>
+                <label for="minha-sintese"><span class="rotulo">Síntese</span> Frase-síntese da sua atuação, enquanto técnico, nesta atividade</label>
+                <textarea id="minha-sintese" rows="2" placeholder="Ex.: Nesta atividade, minha atuação técnica foi...">${esc(rascunho["minha-sintese"] || "")}</textarea>
               </div>
               <div class="acoes acoes-final">
                 <button type="button" class="btn" data-acao="copiar">Copiar relatório</button>
