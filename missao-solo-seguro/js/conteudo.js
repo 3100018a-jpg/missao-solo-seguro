@@ -225,7 +225,7 @@ window.CONTEUDO = {
           retorno: "Decorar números não ensina o significado ambiental de estar acima do VP ou do VI." },
         { id: "b", texto: "Se o solo da horta estiver macio, bem estruturado e com boa drenagem, podemos dispensar o laudo laboratorial e a consulta aos valores orientadores da CONAMA 420 antes de autorizar o plantio de hortaliças?", certa: false,
           retorno: "A textura não substitui a análise laboratorial." },
-        { id: "c", texto: "Para garantir a segurança alimentar da comunidade e dos consumidores, quais limites da Resolução CONAMA nº 420/2009 (VRQ, VP ou VI para uso agrícola) devem ser verificados nos laudos antes de autorizar o plantio de hortaliças?", certa: true,
+        { id: "c", texto: "Para garantir a segurança alimentar da comunidade e dos consumidores, quais limites da Resolução CONAMA nº 420/2009 devem ser verificados nos laudos antes de autorizar o plantio de hortaliças?", certa: true,
           retorno: "Objetivo técnico: exigir a análise laboratorial baseada em norma ambiental oficial." }
       ]
     }
