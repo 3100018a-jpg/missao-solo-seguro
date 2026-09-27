@@ -368,7 +368,7 @@
             S.tocar("erro");
             perderConfianca(3);
             pulsar(f, "tremer");
-            mostrarRetorno(retorno, "erro", "Fora de ordem.", proximo === 0 ? "Comece pelo que havia no território antes do desastre." : "Esse fato vem depois. O que aconteceu logo em seguida?");
+            mostrarRetorno(retorno, "erro", "Fora de ordem.", proximo === 0 ? "Comece pelo que havia no território antes do desastre-crime sociotecnológico." : "Esse fato vem depois. O que aconteceu logo em seguida?");
           }
         });
       });
