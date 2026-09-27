@@ -61,9 +61,9 @@ window.CONTEUDO = {
       "O Pote A tem solo escuro, fofo, com cheiro de terra molhada. O Pote B tem solo claro, arenoso e seco. " +
       "Ela pergunta: qual destes solos é seguro para plantar alface na horta da escola?",
     opcoes: [
-      { id: "a", texto: "Pote A. É escuro e macio, parece rico em matéria orgânica.", certa: false,
+      { id: "a", texto: "Pote A, porque a cor escura, a textura fofa e o cheiro de terra molhada indicam solo rico e saudável.", certa: false,
         retorno: "A cor escura e a maciez indicam matéria orgânica, que tem a ver com fertilidade. Nenhum sentido humano enxerga metais pesados." },
-      { id: "b", texto: "Pote B. É claro e arenoso, parece mais limpo.", certa: false,
+      { id: "b", texto: "Pote B, porque o solo claro, arenoso e seco não tem resíduos visíveis e parece mais limpo.", certa: false,
         retorno: "A aparência também engana no sentido contrário: um solo claro não é automaticamente limpo, nem contaminado." },
       { id: "c", texto: "Não dá para afirmar pela aparência. Preciso do histórico da área e do laudo de laboratório.", certa: true,
         retorno: "Isso mesmo. A decisão técnica começa pelo histórico do terreno e pelo laudo comparado aos valores orientadores." }
@@ -123,11 +123,11 @@ window.CONTEUDO = {
     pergunta: {
       enunciado: "Qual pergunta de mediação abre melhor o Eixo 1 com a turma?",
       opcoes: [
-        { id: "a", texto: "Ao analisar as terras do Assentamento Pastorinhas, qual é o histórico de uso desse solo e qual desastre socioambiental provocado pela mineração alterou radicalmente esse território em 2019?", certa: true,
+        { id: "a", texto: "Ao analisar as terras do Assentamento Pastorinhas, qual é o histórico de uso desse solo e qual desastre-crime sociotecnológico provocado pela mineração alterou radicalmente esse território em 2019?", certa: true,
           retorno: "Objetivo técnico: mostrar que o solo recebia produção agrícola familiar antes de ser atingido pelos rejeitos." },
-        { id: "b", texto: "A terra do assentamento está com uma cor bonita e boa para plantar?", certa: false,
+        { id: "b", texto: "Ao visitar as terras do Assentamento Pastorinhas, a cor, a textura e o aspecto do solo que vemos hoje mostram que a terra já se recuperou e está boa para voltar a plantar hortaliças?", certa: false,
           retorno: "Essa pergunta leva a turma de volta à aparência, que não revela contaminação." },
-        { id: "c", texto: "Quantos quilos de adubo NPK precisamos comprar para recuperar a produção?", certa: false,
+        { id: "c", texto: "Para que as famílias do Assentamento Pastorinhas retomem logo o plantio, quantos quilos de adubo NPK e de calcário precisamos comprar para recuperar a produtividade das hortas e lavouras?", certa: false,
           retorno: "Adubo trata de fertilidade. Antes de pensar em produção, é preciso saber se a área é segura." }
       ]
     }
@@ -166,11 +166,11 @@ window.CONTEUDO = {
     pergunta: {
       enunciado: "Qual pergunta de mediação abre melhor o Eixo 2 com a turma?",
       opcoes: [
-        { id: "a", texto: "Por que o solo escuro é sempre mais saudável que o solo claro?", certa: false,
+        { id: "a", texto: "Considerando que as famílias costumam avaliar a terra pela cor, por que o solo escuro é sempre mais saudável e mais seguro para o cultivo de hortaliças do que o solo claro e arenoso?", certa: false,
           retorno: "A pergunta parte de uma premissa falsa e reforça a ilusão visual." },
         { id: "b", texto: "Sabendo que a área foi coberta por rejeitos de mineração de ferro, quais metais pesados invisíveis na subsuperfície (como ferro, manganês e níquel) devemos investigar como poluentes suspeitos?", certa: true,
           retorno: "Objetivo técnico: associar a atividade minerária à presença de metais pesados no solo e na água." },
-        { id: "c", texto: "Qual combustível vazou no assentamento?", certa: false,
+        { id: "c", texto: "Partindo da suspeita de que houve vazamento de combustível no assentamento, qual produto atingiu o solo e quais hidrocarbonetos (como benzeno, tolueno e xilenos) devemos investigar como poluentes suspeitos?", certa: false,
           retorno: "A fonte está errada. O histórico aponta rejeito de mineração, não combustível." }
       ]
     }
@@ -210,20 +210,20 @@ window.CONTEUDO = {
       enunciado:
         "Pergunta bônus. O laudo mostra ferro no solo da horta cinco vezes maior que no ponto de controle. Em que classe da CONAMA 420 ele se enquadra?",
       opcoes: [
-        { id: "a", texto: "Classe 4, porque está muito acima do ponto de controle.", certa: false,
+        { id: "a", texto: "Classe 4: um teor cinco vezes maior que o do ponto de controle já ultrapassa o VI agrícola e exige gerenciamento como área contaminada.", certa: false,
           retorno: "Para enquadrar em classe é preciso ter VP e VI definidos para a substância no solo. Para o ferro, a CONAMA 420 não define." },
         { id: "b", texto: "Nenhuma: a CONAMA 420 não define VP nem VI de ferro para solo. Avalio a água subterrânea (VI do Fe: 2.450 µg/L) e busco estudos complementares.", certa: true,
           retorno: "Exato. Nem toda substância tem valor orientador para solo. O técnico sabe o que a norma cobre e o que exige outra evidência." },
-        { id: "c", texto: "Não importa: ferro é nutriente de planta.", certa: false,
+        { id: "c", texto: "Nenhuma, e não há o que investigar: o ferro é micronutriente essencial às plantas e, mesmo em excesso, não prejudica o cultivo.", certa: false,
           retorno: "Em excesso, o ferro forma uma camada sobre as sementes e dificulta a germinação, como mostram os estudos em Brumadinho." }
       ]
     },
     pergunta: {
       enunciado: "Qual pergunta de mediação abre melhor o Eixo 3 com a turma?",
       opcoes: [
-        { id: "a", texto: "Qual número da tabela a gente precisa decorar para a prova?", certa: false,
+        { id: "a", texto: "Para a avaliação da unidade, quais valores de VRQ, VP e VI da tabela da Resolução CONAMA nº 420/2009 precisamos decorar, substância por substância, para responder às questões sobre o Assentamento Pastorinhas?", certa: false,
           retorno: "Decorar números não ensina o significado ambiental de estar acima do VP ou do VI." },
-        { id: "b", texto: "Se o solo estiver macio, podemos dispensar o laudo?", certa: false,
+        { id: "b", texto: "Se o solo da horta estiver macio, bem estruturado e com boa drenagem, podemos dispensar o laudo laboratorial e a consulta aos valores orientadores da CONAMA 420 antes de autorizar o plantio de hortaliças?", certa: false,
           retorno: "A textura não substitui a análise laboratorial." },
         { id: "c", texto: "Para garantir a segurança alimentar da comunidade e dos consumidores, quais limites da Resolução CONAMA nº 420/2009 (VRQ, VP ou VI para uso agrícola) devem ser verificados nos laudos antes de autorizar o plantio de hortaliças?", certa: true,
           retorno: "Objetivo técnico: exigir a análise laboratorial baseada em norma ambiental oficial." }
@@ -244,11 +244,11 @@ window.CONTEUDO = {
         opcoes: [
           { id: "A", texto: "Interditar imediatamente toda a área, porque ultrapassar o VRQ já caracteriza risco grave à saúde humana.", certa: false,
             retorno: "O VRQ é a referência natural do solo. Passar dele não exige interdição." },
-          { id: "B", texto: "Liberar o cultivo sem restrições, porque a cor escura e a textura comprovam a segurança.", certa: false,
+          { id: "B", texto: "Liberar o cultivo sem restrições, porque a cor escura, a textura macia e o bom aspecto do solo comprovam a segurança.", certa: false,
             retorno: "A aparência escura não garante ausência de metais pesados." },
           { id: "C", texto: "Orientar monitoramento e controle das fontes, sem interdição, pois o teor está acima do VP e abaixo do VI.", certa: true,
             retorno: "Correto. Entre o VP e o VI o solo ainda mantém suas funções: exige alerta, monitoramento e controle das fontes. A interdição entra em cena acima do VI." },
-          { id: "D", texto: "Pedir apenas o laudo de fertilidade NPK para liberar o plantio de hortaliças.", certa: false,
+          { id: "D", texto: "Pedir apenas um laudo de fertilidade (NPK e matéria orgânica) e, se estiver adequado, liberar o plantio de hortaliças.", certa: false,
             retorno: "NPK mede nutrição vegetal, não segurança toxicológica." }
         ]
       },
@@ -257,13 +257,13 @@ window.CONTEUDO = {
         texto:
           "Níquel (Ni) = 92 mg/kg, acima do VI agrícola (70). As alfaces estão verdes e a família quer colher na semana que vem. O que você recomenda?",
         opcoes: [
-          { id: "A", texto: "Liberar a colheita, porque as plantas estão verdes e bonitas.", certa: false,
+          { id: "A", texto: "Liberar a colheita na semana que vem, porque alfaces verdes, viçosas e sem manchas nas folhas mostram que as plantas não estão absorvendo o níquel do solo.", certa: false,
             retorno: "Planta bonita não prova alimento seguro. Hortaliças podem absorver metais do solo." },
           { id: "B", texto: "Suspender o cultivo e o consumo, comunicar o órgão ambiental (em MG, a FEAM; em SP, a CETESB) e pedir investigação detalhada, avaliação de risco e plano de intervenção.", certa: true,
             retorno: "Correto. Acima do VI há risco potencial à saúde: a área passa a ser gerenciada como área contaminada, protegendo quem consome." },
-          { id: "C", texto: "Aplicar mais adubo NPK para diluir o níquel e seguir plantando.", certa: false,
+          { id: "C", texto: "Aplicar mais adubo NPK e matéria orgânica para diluir o níquel no solo, seguir plantando normalmente e repetir a análise depois da próxima adubação.", certa: false,
             retorno: "Adubo não remove nem dilui metal pesado. É confundir fertilidade com segurança." },
-          { id: "D", texto: "Esperar a chuva lavar o solo e repetir a análise daqui a cinco anos.", certa: false,
+          { id: "D", texto: "Manter a horta como está, esperar que as chuvas lavem o níquel do solo e repetir a análise daqui a cinco anos, sem acionar o órgão ambiental por enquanto.", certa: false,
             retorno: "Metais não se degradam com a chuva e podem migrar para a água. Esperar expõe a família ao risco." }
         ]
       },
@@ -272,11 +272,11 @@ window.CONTEUDO = {
         texto:
           "Níquel (Ni) = 14 mg/kg, abaixo do VRQ de Minas Gerais (21,5). Um morador, assustado, pede para interditar tudo porque ouviu que existe níquel no solo. Como você responde?",
         opcoes: [
-          { id: "A", texto: "Interditar por precaução, já que existe níquel no solo.", certa: false,
+          { id: "A", texto: "Interditar a área por precaução e comunicar o órgão ambiental, já que qualquer teor de níquel no solo representa risco.", certa: false,
             retorno: "Metais existem naturalmente no solo. Abaixo do VRQ, a CONAMA 420 não exige ações." },
           { id: "B", texto: "Explicar que o valor está na faixa natural (Classe 1), registrar o resultado e usar o ponto como referência de comparação.", certa: true,
             retorno: "Correto. Comunicar risco com clareza também é trabalho técnico: nem alarme falso, nem descuido." },
-          { id: "C", texto: "Pedir só uma análise de NPK para confirmar.", certa: false,
+          { id: "C", texto: "Pedir só uma nova análise de fertilidade (NPK e matéria orgânica) para confirmar se o solo está bom para o plantio.", certa: false,
             retorno: "NPK não responde sobre contaminação." }
         ]
       }
