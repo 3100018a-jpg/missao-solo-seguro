@@ -123,7 +123,7 @@ window.CONTEUDO = {
     pergunta: {
       enunciado: "Qual pergunta de mediação abre melhor o Eixo 1 com a turma?",
       opcoes: [
-        { id: "a", texto: "Ao analisar as terras do Assentamento Pastorinhas, qual é o histórico de uso desse solo e qual desastre-crime sociotecnológico provocado pela mineração alterou radicalmente esse território em 2019?", certa: true,
+        { id: "a", texto: "Ao analisar as terras do Assentamento Pastorinhas, qual é o histórico de uso desse solo e qual desastre-crime sociotecnológico alterou, radicalmente, esse território em 2019?", certa: true,
           retorno: "Objetivo técnico: mostrar que o solo recebia produção agrícola familiar antes de ser atingido pelos rejeitos." },
         { id: "b", texto: "Ao visitar as terras do Assentamento Pastorinhas, a cor, a textura e o aspecto do solo que vemos hoje mostram que a terra já se recuperou e está boa para voltar a plantar hortaliças?", certa: false,
           retorno: "Essa pergunta leva a turma de volta à aparência, que não revela contaminação." },
@@ -168,7 +168,7 @@ window.CONTEUDO = {
       opcoes: [
         { id: "a", texto: "Considerando que as famílias costumam avaliar a terra pela cor, por que o solo escuro é sempre mais saudável e mais seguro para o cultivo de hortaliças do que o solo claro e arenoso?", certa: false,
           retorno: "A pergunta parte de uma premissa falsa e reforça a ilusão visual." },
-        { id: "b", texto: "Sabendo que a área foi coberta por rejeitos de mineração de ferro, quais metais pesados invisíveis na subsuperfície (como ferro, manganês e níquel) devemos investigar como poluentes suspeitos?", certa: true,
+        { id: "b", texto: "Sabendo que a área foi coberta por rejeitos de mineração de ferro, quais metais pesados invisíveis na subsuperfície devemos investigar como poluentes suspeitos?", certa: true,
           retorno: "Objetivo técnico: associar a atividade minerária à presença de metais pesados no solo e na água." },
         { id: "c", texto: "Partindo da suspeita de que houve vazamento de combustível no assentamento, qual produto atingiu o solo e quais hidrocarbonetos (como benzeno, tolueno e xilenos) devemos investigar como poluentes suspeitos?", certa: false,
           retorno: "A fonte está errada. O histórico aponta rejeito de mineração, não combustível." }
