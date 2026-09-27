@@ -926,6 +926,7 @@
     await passoSequencia(ctx, F.linhaTempo);
     await passoEscolha(ctx, {
       ...F.pergunta,
+      embaralhar: true,
       antes: `<p class="rotulo">Pergunta de mediação · Eixo 1</p>`,
       aoAcertar: (op) => { estado.perguntasModelo[1] = op.texto; }
     });
@@ -940,6 +941,7 @@
     await passoPedido(ctx, F.pedido);
     await passoEscolha(ctx, {
       ...F.pergunta,
+      embaralhar: true,
       antes: `<p class="rotulo">Pergunta de mediação · Eixo 2</p>`,
       aoAcertar: (op) => { estado.perguntasModelo[2] = op.texto; }
     });
